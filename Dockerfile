@@ -8,5 +8,6 @@ RUN yum check-update && \
     rm -rf /var/lib/yum/*
 
 USER zscaler:zscaler
+VOLUME /opt/zscaler/var
 WORKDIR /opt/zscaler/var
 ENTRYPOINT ["/opt/zscaler/bin/zpa-connector"]
